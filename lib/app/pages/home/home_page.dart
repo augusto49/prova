@@ -41,8 +41,7 @@ class _HomePageState extends State<HomePage> {
                       alignment: Alignment.topCenter,
                       child: Container(
                         width: cardWidth,
-                        margin:
-                            const EdgeInsets.all(10), // Espaçamento uniforme
+                        margin: const EdgeInsets.all(10),
                         child: Card(
                           child: ListTile(
                             title: Text(_homeStore.infos[index]),
@@ -172,10 +171,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _launchPrivacyPolicy() async {
-    const url =
-        'https://www.google.com/'; // Substitua pela URL da sua política de privacidade
+    const url = 'https://www.google.com/';
     if (!await launch(url)) {
-      // Se não for possível lançar a URL, exiba um erro.
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Não foi possível abrir a URL.')),
       );
